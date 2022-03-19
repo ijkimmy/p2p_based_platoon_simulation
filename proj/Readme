@@ -1,0 +1,24 @@
+	---------------------------------------Sets Up Simulation---------------------------------------
+	1. place car2.png, client.py, server.py under current directory
+	2. run following command to set up server connection 
+		python3 server.py
+	* Note: server must be established in order to accept any client connection
+	3. run following command to set up client connection
+		python3 client.py NAMEOFSERVERMACHINE
+	* Note: client ID received from server if successfully connect; if timed out (15 sec) before receiving ID, must quit all process (including server) and start over 
+	* Note: first client has following functionalities
+		- press 'c' or 'C' to add one more client
+		- press 's' or 'S' to start simulation (no more client accepted from this point)
+	* Note: clients and server may ssh into any machines in SUN lab
+	* Note: maximum number of cars is 9
+	---------------------------------------Simulation Began---------------------------------------
+	4. Each client has following functionalities
+		- press 'd' or 'D' to accelerate
+		- press 'a' or 'A' to decelerate
+		- press 's' or 'S' to stop
+		- press 'q' or 'Q' to quit
+	* Note: acceleration and deceleration of non-lead car may not affect the speed of platoon due to conflicts (front car priority)
+	* Note: maximum speed of platoon is 1.1
+	* Note: all failures handled properly (quit or failure of one or more client immediately stop and quits entire system)
+	* Note: no action is taken from server side but only visualization
+	* Note: when all program exits, server outputs 3 records (speed, position, headways) of simulation into text files
